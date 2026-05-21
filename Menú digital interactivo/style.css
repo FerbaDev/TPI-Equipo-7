@@ -1,0 +1,20 @@
+:root {
+  --black: #0a0908ff;
+  --jet-black: #22333bff;
+  --white-smoke: #f2f4f3ff;
+  --dusty-taupe: #a9927dff;
+  --stone-brown: #5e503fff;
+}
+
+
+.montserrat {
+  font-family: "Montserrat", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 400;
+  font-style: normal;
+}
+
+h1 {
+    color: var(--dusty-taupe)
+
+}
