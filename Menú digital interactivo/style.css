@@ -6,6 +6,11 @@
   --stone-brown: #5e503fff;
 }
 
+body{
+    background-color: var(--white-smoke);
+}
+
+/* FONT */
 
 .montserrat {
   font-family: "Montserrat", sans-serif;
@@ -14,7 +19,39 @@
   font-style: normal;
 }
 
-h1 {
-    color: var(--dusty-taupe)
+/* NAVBAR */
 
+.cafe-navbar{
+    background-color: var(--stone-brown);
+    padding: 16px 0;
+}
+
+.navbar-brand{
+    letter-spacing: 1px;
+}
+
+.nav-link{
+    transition: 0.3s;
+    margin: 0 10px;
+}
+
+.nav-link:hover{
+    color: var(--dusty-taupe) !important;
+}
+
+/* CART */
+
+.cart-btn{
+    border: 1px solid var(--dusty-taupe);
+    color: var(--white-smoke);
+}
+
+.cart-btn:hover{
+    background-color: var(--dusty-taupe);
+    color: var(--black);
+}
+
+#cart-count{
+    background-color: white;
+    color: var(--black);
 }
