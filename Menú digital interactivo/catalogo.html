@@ -72,35 +72,86 @@
 
         <h1>Página del Catálogo</h1>
 
-        <div class="container">
-            <div class="row row-cols-1 row-cols-md-4 g-4 mt-1 justify-content-center">
-            <a href="#" class="text-decoration-none">
-                <div class="col">
-                    <div class="card h-100 shadow-sm card-custom card-hover">
-                        <div class="text-center p-3">
-                            <img src="https://picsum.photos/200/300" class="img-fluid img-fixed" alt="@item.Name">
-                        </div>
-                        <div class="card-body text-center d-flex flex-column">
-                            <h6 class="card-title text-dark fw-bold title-fixed">Café Colombia</h6>
-                            <div class="mt-auto">
-                                <div class="price-section">
-                                    <div>
-                                        <small class="text-muted text-decoration-line-through fs-6">$1.699.999</small>
-                                    </div>
-                                    <div>
-                                        <span class="text-success fw-bold fs-5">$1.529.999</span>
-                                        <span class="badge bg-success ms-2">10% OFF</span>
-                                    </div>
-                                </div>
-                                <div class="text-success fw-bold mt-2">Agregar al carrito</div>
-                                
+        <section class="catalogo py-5">
+            <div class="container">
+
+                <!-- ROW -->
+                <div class="row g-4">
+                    <!-- CARD 1 -->
+
+                    <div class="col-12 col-md-6 col-lg-4">
+                        <div class="card h-100 shadow-sm border-0">
+                            <div class="card-body d-flex flex-column">
+                                <h5 class="card-title">
+                                    Latte
+                                </h5>
+                                <p class="card-text text-secondary">
+                                    Café suave con leche vaporizada.
+                                </p>
+                                <h4 class="mb-4">
+                                    $3500
+                                </h4>
+                                <button 
+                                    class="btn btn-dark mt-auto"
+                                    onclick="agregarProducto('Latte', 3500)"
+                                >
+                                    Agregar al carrito
+                                </button>
                             </div>
                         </div>
                     </div>
+
+                    <!-- CARD 2 -->
+
+                    <div class="col-12 col-md-6 col-lg-4">
+                        <div class="card h-100 shadow-sm border-0">
+                            <div class="card-body d-flex flex-column">
+                                <h5 class="card-title">
+                                    Espresso
+                                </h5>
+                                <p class="card-text text-secondary">
+                                    Café intenso y aromático.
+                                </p>
+                                <h4 class="mb-4">
+                                    $2500
+                                </h4>
+                                <button 
+                                    class="btn btn-dark mt-auto"
+                                    onclick="agregarProducto('Espresso', 2500)"
+                                >
+                                    Agregar al carrito
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- CARD 3 -->
+
+                    <div class="col-12 col-md-6 col-lg-4">
+                        <div class="card h-100 shadow-sm border-0">
+                            <div class="card-body d-flex flex-column">
+                                <h5 class="card-title">
+                                    Capuccino
+                                </h5>
+                                <p class="card-text text-secondary">
+                                    Espresso con espuma cremosa.
+                                </p>
+                                <h4 class="mb-4">
+                                    $4000
+                                </h4>
+                                <button 
+                                    class="btn btn-dark mt-auto"
+                                    onclick="agregarProducto('Capuccino', 4000)"
+                                >
+                                    Agregar al carrito
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+
                 </div>
-            </a>
             </div>
-            </div>
+        </section>
 
 
 
