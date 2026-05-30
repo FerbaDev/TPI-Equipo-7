@@ -55,3 +55,7 @@ body{
     background-color: white;
     color: var(--black);
 }
+
+.translate-middle-prop {
+    transform: translate(-40%,-5%);
+}
