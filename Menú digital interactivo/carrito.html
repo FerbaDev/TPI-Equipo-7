@@ -70,7 +70,56 @@
     <main>
 
     <h1>Página del Carrito</h1>
+    <main class="py-5">
+        <section class="carrito">
+            <div class="container">
 
+                <div class="mb-5">
+                    <h1 class="fw-bold montserrat">
+                        Tu carrito
+                    </h1>
+                    <p class="text-secondary">
+                        Resumen de tu compra
+                    </p>
+                </div>
+
+                <!-- CARD CARRITO -->
+
+                <div class="card shadow-sm border-0">
+                    <div class="card-body">
+
+                        <h4 class="mb-4">
+                            Productos agregados
+                        </h4>
+
+                        <pre id="detalle-carrito"></pre>
+                        <hr>
+
+                        <div class="d-flex justify-content-between align-items-center">
+                            <h3>
+                                Total
+                            </h3>
+                            <h3 id="total-carrito">
+                                $0
+                            </h3>
+                        </div>
+
+                        <!-- BOTONES -->
+
+                        <div class="d-flex gap-3 mt-4">
+                            <button class="btn btn-dark">
+                                Finalizar compra
+                            </button>
+
+                            <button class="btn btn-outline-dark">
+                                Vaciar carrito
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>    
         
 
 
