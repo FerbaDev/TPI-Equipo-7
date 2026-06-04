@@ -75,7 +75,227 @@
         <section class="catalogo py-5">
             <div class="container">
 
-                <!-- acá va el catálogo, con sus productos, imágenes, precios, etc. Puedes usar tarjetas de Bootstrap para mostrar cada producto de manera atractiva y organizada. Asegúrate de incluir botones para agregar los productos al carrito y cualquier otra información relevante que quieras mostrar a los clientes. -->
+            <div class="container my-4">
+    <div class="row g-4">
+
+        <!-- 1. Café del día: Caramel Latte -->
+        <div class="col-md-6 col-lg-4">
+            <div class="card h-100">
+                <img src="img/caramel-latte.jpg" class="card-img-top" alt="Caramel Latte">
+                <div class="card-body d-flex flex-column">
+                    <h5 class="card-title">Café del día: Caramel Latte</h5>
+                    <p class="card-text">
+                        <strong>Cantidad:</strong> 7gr + 180ml de leche<br>
+                        <strong>País:</strong> Italia<br>
+                        <strong>Notas:</strong> Especias dulces<br>
+                        <strong>Tostado:</strong> Ligero
+                    </p>
+                    <p class="card-text fs-5 fw-bold">$5000</p>
+
+                    <button
+                        class="btn btn-dark mt-auto"
+                        onclick="agregarProducto('Caramel Latte', 5000)"
+                    >
+                        <i class="bi bi-plus-circle"></i> Agregar al carrito
+                    </button>
+                </div>
+            </div>
+        </div>
+
+        <!-- 2. Café americano -->
+        <div class="col-md-6 col-lg-4">
+            <div class="card h-100">
+                <img src="img/americano.jpg" class="card-img-top" alt="Café americano">
+                <div class="card-body d-flex flex-column">
+                    <h5 class="card-title">Café americano</h5>
+                    <p class="card-text">
+                        <strong>Cantidad:</strong> 7gr<br>
+                        <strong>País:</strong> Etiopía<br>
+                        <strong>Notas:</strong> Frutos secos y cítricos<br>
+                        <strong>Tostado:</strong> Medio
+                    </p>
+                    <p class="card-text fs-5 fw-bold">$3000</p>
+
+                    <button
+                        class="btn btn-dark mt-auto"
+                        onclick="agregarProducto('Café americano', 3000)"
+                    >
+                        <i class="bi bi-plus-circle"></i> Agregar al carrito
+                    </button>
+                </div>
+            </div>
+        </div>
+
+        <!-- 3. Espresso simple -->
+        <div class="col-md-6 col-lg-4">
+            <div class="card h-100">
+                <img src="img/espresso-simple.jpg" class="card-img-top" alt="Espresso simple">
+                <div class="card-body d-flex flex-column">
+                    <h5 class="card-title">Espresso simple</h5>
+                    <p class="card-text">
+                        <strong>Cantidad:</strong> 7gr<br>
+                        <strong>País:</strong> Colombia<br>
+                        <strong>Notas:</strong> Almendras y chocolate<br>
+                        <strong>Tostado:</strong> Medio
+                    </p>
+                    <p class="card-text fs-5 fw-bold">$3000</p>
+
+                    <button
+                        class="btn btn-dark mt-auto"
+                        onclick="agregarProducto('Espresso simple', 3000)"
+                    >
+                        <i class="bi bi-plus-circle"></i> Agregar al carrito
+                    </button>
+                </div>
+            </div>
+        </div>
+
+        <!-- 4. Espresso doble -->
+        <div class="col-md-6 col-lg-4">
+            <div class="card h-100">
+                <img src="img/espresso-doble.jpg" class="card-img-top" alt="Espresso doble">
+                <div class="card-body d-flex flex-column">
+                    <h5 class="card-title">Espresso doble</h5>
+                    <p class="card-text">
+                        <strong>Cantidad:</strong> 14gr<br>
+                        <strong>País:</strong> Colombia<br>
+                        <strong>Notas:</strong> Almendras y chocolate<br>
+                        <strong>Tostado:</strong> Medio
+                    </p>
+                    <p class="card-text fs-5 fw-bold">$4000</p>
+
+                    <button
+                        class="btn btn-dark mt-auto"
+                        onclick="agregarProducto('Espresso doble', 4000)"
+                    >
+                        <i class="bi bi-plus-circle"></i> Agregar al carrito
+                    </button>
+                </div>
+            </div>
+        </div>
+
+        <!-- 5. Cappuccino -->
+        <div class="col-md-6 col-lg-4">
+            <div class="card h-100">
+                <img src="img/cappuccino.jpg" class="card-img-top" alt="Cappuccino">
+                <div class="card-body d-flex flex-column">
+                    <h5 class="card-title">Cappuccino</h5>
+                    <p class="card-text">
+                        <strong>Cantidad:</strong> 7gr + 150ml de leche<br>
+                        <strong>País:</strong> Brasil<br>
+                        <strong>Notas:</strong> Uva roja, dátiles<br>
+                        <strong>Tostado:</strong> Ligero
+                    </p>
+                    <p class="card-text fs-5 fw-bold">$4800</p>
+
+                    <button
+                        class="btn btn-dark mt-auto"
+                        onclick="agregarProducto('Cappuccino', 4800)"
+                    >
+                        <i class="bi bi-plus-circle"></i> Agregar al carrito
+                    </button>
+                </div>
+            </div>
+        </div>
+
+        <!-- 6. Latte -->
+        <div class="col-md-6 col-lg-4">
+            <div class="card h-100">
+                <img src="img/latte.jpg" class="card-img-top" alt="Latte">
+                <div class="card-body d-flex flex-column">
+                    <h5 class="card-title">Latte</h5>
+                    <p class="card-text">
+                        <strong>Cantidad:</strong> 7gr + 180ml de leche<br>
+                        <strong>País:</strong> Italia<br>
+                        <strong>Notas:</strong> Especias dulces<br>
+                        <strong>Tostado:</strong> Ligero
+                    </p>
+                    <p class="card-text fs-5 fw-bold">$4800</p>
+
+                    <button
+                        class="btn btn-dark mt-auto"
+                        onclick="agregarProducto('Latte', 4800)"
+                    >
+                        <i class="bi bi-plus-circle"></i> Agregar al carrito
+                    </button>
+                </div>
+            </div>
+        </div>
+
+        <!-- 7. Iced Latte -->
+        <div class="col-md-6 col-lg-4">
+            <div class="card h-100">
+                <img src="img/iced-latte.jpg" class="card-img-top" alt="Iced Latte">
+                <div class="card-body d-flex flex-column">
+                    <h5 class="card-title">Iced Latte</h5>
+                    <p class="card-text">
+                        <strong>Cantidad:</strong> 7gr + 180ml de leche<br>
+                        <strong>País:</strong> Italia<br>
+                        <strong>Notas:</strong> Especias dulces<br>
+                        <strong>Tostado:</strong> Ligero
+                    </p>
+                    <p class="card-text fs-5 fw-bold">$4800</p>
+
+                    <button
+                        class="btn btn-dark mt-auto"
+                        onclick="agregarProducto('Iced Latte', 4800)"
+                    >
+                        <i class="bi bi-plus-circle"></i> Agregar al carrito
+                    </button>
+                </div>
+            </div>
+        </div>
+
+        <!-- 8. Café método V60 -->
+        <div class="col-md-6 col-lg-4">
+            <div class="card h-100">
+                <img src="img/v60.jpg" class="card-img-top" alt="Café método V60">
+                <div class="card-body d-flex flex-column">
+                    <h5 class="card-title">Café método V60</h5>
+                    <p class="card-text">
+                        <strong>Cantidad:</strong> 15gr<br>
+                        <strong>País:</strong> Etiopía<br>
+                        <strong>Notas:</strong> Frutos secos y cítricos<br>
+                        <strong>Tostado:</strong> Medio
+                    </p>
+                    <p class="card-text fs-5 fw-bold">$5000</p>
+
+                    <button
+                        class="btn btn-dark mt-auto"
+                        onclick="agregarProducto('Café método V60', 5000)"
+                    >
+                        <i class="bi bi-plus-circle"></i> Agregar al carrito
+                    </button>
+                </div>
+            </div>
+        </div>
+
+        <!-- 9. Café método Chemex -->
+        <div class="col-md-6 col-lg-4">
+            <div class="card h-100">
+                <img src="img/chemex.jpg" class="card-img-top" alt="Café método Chemex">
+                <div class="card-body d-flex flex-column">
+                    <h5 class="card-title">Café método Chemex</h5>
+                    <p class="card-text">
+                        <strong>Cantidad:</strong> 15gr<br>
+                        <strong>País:</strong> Colombia<br>
+                        <strong>Notas:</strong> Almendras y chocolate<br>
+                        <strong>Tostado:</strong> Medio
+                    </p>
+                    <p class="card-text fs-5 fw-bold">$5000</p>
+
+                    <button
+                        class="btn btn-dark mt-auto"
+                        onclick="agregarProducto('Café método Chemex', 5000)"
+                    >
+                        <i class="bi bi-plus-circle"></i> Agregar al carrito
+                    </button>
+                </div>
+            </div>
+        </div>
+
+    </div>
+</div>
 
 
 
