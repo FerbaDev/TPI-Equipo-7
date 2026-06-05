@@ -288,3 +288,156 @@ let detalle = "";
 * Persistencia con localStorage
 * Checkout visual
 * Confetti al finalizar compra
+
+
+# Semana 8
+
+## Historia de Usuario — Fer
+
+**Como** desarrollador del proyecto SmartRoast,
+
+**quiero** completar el funcionamiento del carrito entre las distintas páginas del sitio,
+
+**para** que el usuario pueda conservar sus productos seleccionados y visualizar correctamente el resumen de compra.
+
+### Tareas
+
+* Guardar información del carrito en localStorage.
+* Recuperar información al cargar las páginas.
+* Mantener actualizado el contador de la navbar.
+* Mostrar productos agregados en `carrito.html`.
+* Mostrar total calculado automáticamente.
+* Implementar botón "Vaciar carrito".
+* Corregir errores y probar flujo completo.
+
+### Criterios de aceptación
+
+* El contador se actualiza correctamente al agregar productos.
+* Los productos permanecen al navegar entre páginas.
+* El carrito muestra el detalle completo de la compra.
+* El total se calcula automáticamente.
+* El usuario puede vaciar el carrito.
+
+---
+
+## Issues — Fer
+
+### #13 Guardar datos del carrito en localStorage
+
+* Guardar:
+
+  * cantidadProductos
+  * total
+  * detalle
+
+### #14 Recuperar datos al cargar la página
+
+* Leer datos desde localStorage.
+* Inicializar variables.
+
+### #15 Mantener actualizado el contador global
+
+* Actualizar el contenido de `#cart-count`.
+
+### #16 Mostrar detalle de compra
+
+* Completar el contenido de `#detalle-carrito`.
+
+### #17 Mostrar total de compra
+
+* Completar el contenido de `#total-carrito`.
+
+### #18 Implementar botón Vaciar carrito
+
+* Reiniciar variables.
+* Limpiar localStorage.
+* Actualizar interfaz.
+
+### #19 Probar flujo completo
+
+* Agregar productos.
+* Cambiar entre páginas.
+* Verificar persistencia.
+* Verificar cálculo del total.
+
+---
+
+# Historia de Usuario — Magalí
+
+**Como** responsable visual del proyecto SmartRoast,
+
+**quiero** mejorar la presentación visual del catálogo y del carrito,
+
+**para** ofrecer una experiencia de usuario clara, moderna y adaptable a distintos dispositivos.
+
+### Tareas
+
+* Mejorar el diseño de las tarjetas de productos.
+* Revisar la presentación de imágenes.
+* Mejorar la apariencia de los botones.
+* Diseñar la visualización del carrito.
+* Revisar el comportamiento responsive del sitio.
+* Mantener coherencia visual entre las páginas.
+* Preparar estilos para el estado vacío del carrito.
+
+### Criterios de aceptación
+
+* El catálogo presenta productos de forma clara y atractiva.
+* Las imágenes mantienen una apariencia uniforme.
+* El carrito tiene una presentación visual organizada.
+* Los botones poseen feedback visual.
+* El sitio se adapta correctamente a celular y escritorio.
+* La estética es consistente en todas las páginas.
+
+---
+
+## Issues — Magalí
+
+### #10 Mejorar diseño de las cards del catálogo
+
+* Revisar márgenes y espaciados.
+* Mejorar alineación del contenido.
+* Revisar tamaños de títulos y precios.
+
+### #11 Unificar imágenes de productos
+
+* Revisar proporciones.
+* Mantener altura uniforme en todas las cards.
+* Corregir imágenes que deformen el diseño.
+
+### #12 Mejorar diseño de botones
+
+* Personalizar botón "Agregar al carrito".
+* Personalizar botones del checkout.
+* Agregar estados hover.
+
+### #13 Diseñar visualmente el carrito
+
+* Mejorar presentación de productos agregados.
+* Mejorar presentación del total.
+* Mejorar acciones del usuario.
+
+### #14 Implementar responsive del catálogo
+
+* Revisar visualización en móvil.
+* Revisar visualización en tablet.
+* Ajustar separación entre cards.
+
+### #15 Implementar responsive del carrito
+
+* Revisar comportamiento de botones.
+* Revisar contenedor principal.
+* Ajustar textos y espaciados.
+
+### #16 Crear estado vacío del carrito
+
+Mostrar un mensaje cuando no existan productos agregados:
+
+> Tu carrito está vacío. Explorá nuestro catálogo para comenzar tu pedido.
+
+### #17 Mejorar coherencia visual general
+
+* Revisar colores.
+* Revisar tipografías.
+* Revisar espaciados.
+* Mantener identidad visual SmartRoast.
