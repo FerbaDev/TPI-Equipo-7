@@ -80,7 +80,7 @@
                     <!-- 1. Café del día: Caramel Latte -->
                     <div class="col-md-6 col-lg-4">
                         <div class="card h-100">
-                            <img src="img/caramel-latte.jpg" class="card-img-top" alt="Caramel Latte">
+                            <img src="/imagenes/caramel latte.jpg" class="card-img-top" alt="Caramel Latte">
                             <div class="card-body d-flex flex-column">
                                 <h5 class="card-title">Café del día: Caramel Latte</h5>
                                 <p class="card-text">
@@ -104,7 +104,7 @@
                     <!-- 2. Café americano -->
                     <div class="col-md-6 col-lg-4">
                         <div class="card h-100">
-                            <img src="img/americano.jpg" class="card-img-top" alt="Café americano">
+                            <img src="/imagenes/americano.jpg" class="card-img-top" alt="Café americano">
                             <div class="card-body d-flex flex-column">
                                 <h5 class="card-title">Café americano</h5>
                                 <p class="card-text">
@@ -125,10 +125,58 @@
                         </div>
                     </div>
 
+                    <!-- 5. Cappuccino -->
+                    <div class="col-md-6 col-lg-4">
+                        <div class="card h-100">
+                            <img src="/imagenes/cappuccino.jpg" class="card-img-top" alt="Cappuccino">
+                            <div class="card-body d-flex flex-column">
+                                <h5 class="card-title">Cappuccino</h5>
+                                <p class="card-text">
+                                    <strong>Cantidad:</strong> 7gr + 150ml de leche<br>
+                                    <strong>País:</strong> Brasil<br>
+                                    <strong>Notas:</strong> Uva roja, dátiles<br>
+                                    <strong>Tostado:</strong> Ligero
+                                </p>
+                                <p class="card-text fs-5 fw-bold">$4800</p>
+
+                                <button
+                                    class="btn btn-dark mt-auto"
+                                    onclick="agregarProducto('Cappuccino', 4800)"
+                                >
+                                    <i class="bi bi-plus-circle"></i> Agregar al carrito
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- 7. Iced Latte -->
+                    <div class="col-md-6 col-lg-4">
+                        <div class="card h-100">
+                            <img src="/imagenes/iced latte.jpg" class="card-img-top" alt="Iced Latte">
+                            <div class="card-body d-flex flex-column">
+                                <h5 class="card-title">Iced Latte</h5>
+                                <p class="card-text">
+                                    <strong>Cantidad:</strong> 7gr + 180ml de leche<br>
+                                    <strong>País:</strong> Italia<br>
+                                    <strong>Notas:</strong> Especias dulces<br>
+                                    <strong>Tostado:</strong> Ligero
+                                </p>
+                                <p class="card-text fs-5 fw-bold">$4800</p>
+
+                                <button
+                                    class="btn btn-dark mt-auto"
+                                    onclick="agregarProducto('Iced Latte', 4800)"
+                                >
+                                    <i class="bi bi-plus-circle"></i> Agregar al carrito
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+
                     <!-- 3. Espresso simple -->
                     <div class="col-md-6 col-lg-4">
                         <div class="card h-100">
-                            <img src="img/espresso-simple.jpg" class="card-img-top" alt="Espresso simple">
+                            <img src="/imagenes/espresso simple.jpg" class="card-img-top" alt="Espresso simple">
                             <div class="card-body d-flex flex-column">
                                 <h5 class="card-title">Espresso simple</h5>
                                 <p class="card-text">
@@ -152,7 +200,7 @@
                     <!-- 4. Espresso doble -->
                     <div class="col-md-6 col-lg-4">
                         <div class="card h-100">
-                            <img src="img/espresso-doble.jpg" class="card-img-top" alt="Espresso doble">
+                            <img src="/imagenes/espresso doble.jpg" class="card-img-top" alt="Espresso doble">
                             <div class="card-body d-flex flex-column">
                                 <h5 class="card-title">Espresso doble</h5>
                                 <p class="card-text">
@@ -173,34 +221,10 @@
                         </div>
                     </div>
 
-                    <!-- 5. Cappuccino -->
-                    <div class="col-md-6 col-lg-4">
-                        <div class="card h-100">
-                            <img src="img/cappuccino.jpg" class="card-img-top" alt="Cappuccino">
-                            <div class="card-body d-flex flex-column">
-                                <h5 class="card-title">Cappuccino</h5>
-                                <p class="card-text">
-                                    <strong>Cantidad:</strong> 7gr + 150ml de leche<br>
-                                    <strong>País:</strong> Brasil<br>
-                                    <strong>Notas:</strong> Uva roja, dátiles<br>
-                                    <strong>Tostado:</strong> Ligero
-                                </p>
-                                <p class="card-text fs-5 fw-bold">$4800</p>
-
-                                <button
-                                    class="btn btn-dark mt-auto"
-                                    onclick="agregarProducto('Cappuccino', 4800)"
-                                >
-                                    <i class="bi bi-plus-circle"></i> Agregar al carrito
-                                </button>
-                            </div>
-                        </div>
-                    </div>
-
                     <!-- 6. Latte -->
                     <div class="col-md-6 col-lg-4">
                         <div class="card h-100">
-                            <img src="img/latte.jpg" class="card-img-top" alt="Latte">
+                            <img src="/imagenes/latte.jpg" class="card-img-top" alt="Latte">
                             <div class="card-body d-flex flex-column">
                                 <h5 class="card-title">Latte</h5>
                                 <p class="card-text">
@@ -221,34 +245,10 @@
                         </div>
                     </div>
 
-                    <!-- 7. Iced Latte -->
-                    <div class="col-md-6 col-lg-4">
-                        <div class="card h-100">
-                            <img src="img/iced-latte.jpg" class="card-img-top" alt="Iced Latte">
-                            <div class="card-body d-flex flex-column">
-                                <h5 class="card-title">Iced Latte</h5>
-                                <p class="card-text">
-                                    <strong>Cantidad:</strong> 7gr + 180ml de leche<br>
-                                    <strong>País:</strong> Italia<br>
-                                    <strong>Notas:</strong> Especias dulces<br>
-                                    <strong>Tostado:</strong> Ligero
-                                </p>
-                                <p class="card-text fs-5 fw-bold">$4800</p>
-
-                                <button
-                                    class="btn btn-dark mt-auto"
-                                    onclick="agregarProducto('Iced Latte', 4800)"
-                                >
-                                    <i class="bi bi-plus-circle"></i> Agregar al carrito
-                                </button>
-                            </div>
-                        </div>
-                    </div>
-
                     <!-- 8. Café método V60 -->
                     <div class="col-md-6 col-lg-4">
                         <div class="card h-100">
-                            <img src="img/v60.jpg" class="card-img-top" alt="Café método V60">
+                            <img src="/imagenes/v60.jpg" class="card-img-top" alt="Café método V60">
                             <div class="card-body d-flex flex-column">
                                 <h5 class="card-title">Café método V60</h5>
                                 <p class="card-text">
@@ -272,7 +272,7 @@
                     <!-- 9. Café método Chemex -->
                     <div class="col-md-6 col-lg-4">
                         <div class="card h-100">
-                            <img src="img/chemex.jpg" class="card-img-top" alt="Café método Chemex">
+                            <img src="/imagenes/chemex.jpg" class="card-img-top" alt="Café método Chemex">
                             <div class="card-body d-flex flex-column">
                                 <h5 class="card-title">Café método Chemex</h5>
                                 <p class="card-text">
