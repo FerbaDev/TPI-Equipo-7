@@ -39,6 +39,110 @@ body{
     color: var(--dusty-taupe) !important;
 }
 
+/* INICIO */
+/* HERO */
+.hero {
+    min-height: 80vh;
+    padding: 0 20px;
+    background-image:
+        linear-gradient(
+            rgba(10,9,8,.6),
+            rgba(10,9,8,.6)
+        ),
+        url("/imagenes/pexels-harold-productions-74516182-15312642.jpg");
+
+    background-size: cover;
+    background-position: center;
+
+    display: flex;
+    align-items: center;
+}
+
+.hero-brand {
+    color: var(--dusty-taupe);
+    font-weight: 700;
+    letter-spacing: 3px;
+    display: block;
+    margin-bottom: 1rem;
+}
+
+.hero-content {
+    max-width: 800px;
+    color: white;
+}
+
+.hero-content h1 {
+    font-size: 3rem;
+    font-weight: 800;
+    margin-bottom: 1rem;
+}
+
+.hero-content p {
+    font-size: 1.2rem;
+    margin-bottom: 2rem;
+}
+
+@media (max-width: 768px) {
+
+    .hero-content h1 {
+        font-size: 2rem;
+    }
+
+    .hero-content p {
+        font-size: 1rem;
+    }
+
+}
+
+/* SECCION 2 INICIO */
+.origen-dia {
+    background-color: var(--white-smoke);
+}
+
+.origen-dia h2 {
+    color: var(--jet-black);
+    font-weight: 700;
+}
+
+.origen-dia h3 {
+    color: var(--stone-brown);
+}
+
+/* SECCION 3 INICIO */
+
+.como-funciona {
+    background-color: white;
+}
+
+.como-funciona h2 {
+    color: var(--jet-black);
+    font-weight: 700;
+}
+
+.paso-card {
+    background-color: var(--white-smoke);
+    padding: 2rem;
+    border-radius: 12px;
+    height: 100%;
+
+    transition: .3s;
+}
+
+.paso-card:hover {
+    transform: translateY(-5px);
+}
+
+.paso-icono {
+    font-size: 3rem;
+    color: var(--stone-brown);
+    margin-bottom: 1rem;
+}
+
+.paso-card h4 {
+    color: var(--stone-brown);
+    margin-bottom: 1rem;
+}
+
 /* CART */
 
 .cart-btn{
@@ -110,6 +214,7 @@ body{
     border-color: var(--stone-brown);
     color: white;
     font-weight: 600;
+    padding: 0.9rem 1.8rem;
 }
 
 .btn-finalizar:hover {
