@@ -59,3 +59,62 @@ body{
 .translate-middle-prop {
     transform: translate(-40%,-5%);
 }
+
+.carrito {
+    background-color: var(--white-smoke);
+    min-height: calc(100vh - 80px);
+    padding-block: 50px;
+}
+
+.carrito .card {
+    border-radius: 20px;
+    overflow: hidden;
+    background: white;
+    box-shadow: 0 15px 35px rgba(0,0,0,.08);
+}
+
+.carrito h1 {
+    color: var(--black);
+    font-size: 2.5rem;
+    margin-bottom: .5rem;
+}
+
+.carrito p {
+    color: var(--dusty-taupe);
+}
+
+#detalle-carrito {
+    background-color: var(--white-smoke);
+    border-radius: 12px;
+    padding: 1rem;
+    min-height: 120px;
+
+    font-family: "Montserrat", sans-serif;
+    font-size: .95rem;
+    white-space: pre-wrap;
+
+    color: var(--jet-black);
+}
+
+.carrito hr {
+    border-top: 2px solid rgba(169,146,125,.3);
+}
+
+#total-carrito {
+    color: var(--stone-brown);
+    font-weight: 800;
+}
+
+.btn-finalizar {
+    background-color: var(--stone-brown);
+    border-color: var(--stone-brown);
+    color: white;
+    font-weight: 600;
+}
+
+.btn-finalizar:hover {
+    background-color: var(--jet-black);
+    border-color: var(--jet-black);
+    color: white;
+}
+
