@@ -39,6 +39,12 @@ body{
     color: var(--dusty-taupe) !important;
 }
 
+.navbar-logo {
+    height: 70px;
+    width: auto;
+    display: block;
+}
+
 /* INICIO */
 /* HERO */
 .hero {
@@ -223,3 +229,76 @@ body{
     color: white;
 }
 
+/* FOOTER */
+
+.footer-smart {
+
+    background-color: var(--black);
+
+    color: white;
+
+    padding: 4rem 0 2rem;
+
+}
+
+.footer-smart h4,
+.footer-smart h5 {
+
+    color: var(--dusty-taupe);
+
+    margin-bottom: 1rem;
+
+}
+
+.footer-smart p {
+
+    color: rgba(255,255,255,.8);
+
+}
+
+.footer-smart hr {
+
+    margin: 2rem 0;
+
+    border-color: rgba(255,255,255,.15);
+
+}
+
+.footer-social {
+
+    display: flex;
+    gap: 1rem;
+
+}
+
+.footer-social a {
+
+    color: white;
+
+    font-size: 1.5rem;
+
+    transition: .3s;
+
+}
+
+.footer-social a:hover {
+
+    color: var(--dusty-taupe);
+
+}
+
+.footer-copy {
+
+    text-align: center;
+
+}
+
+.footer-copy p {
+
+    margin: 0;
+
+    font-size: .9rem;
+
+    color: rgba(255,255,255,.6);
+
+}
