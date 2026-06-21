@@ -55,7 +55,7 @@ body{
             rgba(10,9,8,.6),
             rgba(10,9,8,.6)
         ),
-        url("/imagenes/pexels-harold-productions-74516182-15312642.jpg");
+        url("Imagenes/pexels-harold-productions-74516182-15312642.jpg");
 
     background-size: cover;
     background-position: center;
@@ -181,7 +181,15 @@ body{
     overflow: hidden;
     background: white;
     box-shadow: 0 15px 35px rgba(0,0,0,.08);
+    width: 50%;
+    margin: auto;
 }
+@media (max-width: 768px) {
+    .carrito .card {
+        width: 90%;
+    }
+}
+
 
 .carrito h1 {
     color: var(--black);
