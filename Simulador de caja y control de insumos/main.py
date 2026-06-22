@@ -39,45 +39,191 @@ inventario = {
 
 historial_ventas = []
 
+
+# =====================================
+# FUNCIONES
+# =====================================
+
 def mostrar_menu():
 
     print("\n" + "=" * 40)
     print("SMART ROAST")
     print("=" * 40)
 
-    print("1. Espresso")
-    print("2. Cafe con leche")
-    print("3. Filtrado V60")
-    print("4. Bolsa de granos 250g")
-    print("5. Ver inventario")
-    print("6. Ver historial")
+    print("1. Registrar venta")
+    print("2. Ver inventario")
+    print("3. Ver historial")
+    print("4. Ver facturación total")
     print("0. Salir")
 
-def verificar_stock(
+def mostrar_productos(productos):
+
+    print("\nCATÁLOGO")
+
+    for codigo, producto in productos.items():
+
+        print(
+            f"{codigo}. {producto['nombre']} - ${producto['precio']}"
+        )
+
+def registrar_venta(
     inventario,
+    historial,
     productos,
-    opcion,
+    opcion_producto,
     cantidad
 ):
 
+    if opcion_producto not in productos:
+        return False, 0
+
+    try:
+
+        cantidad_num = int(cantidad)
+
+        if cantidad_num <= 0:
+            return False, 0
+
+    except ValueError:
+
+        return False, 0
+
     cafe_necesario = (
-        productos[opcion]["cafe"]
-        * cantidad
+        productos[opcion_producto]["cafe"]
+        * cantidad_num
     )
 
     leche_necesaria = (
-        productos[opcion]["leche"]
-        * cantidad
+        productos[opcion_producto]["leche"]
+        * cantidad_num
     )
 
     if (
-        inventario["cafe"] >= cafe_necesario
-        and
-        inventario["leche"] >= leche_necesaria
+        inventario["cafe"] < cafe_necesario
+        or
+        inventario["leche"] < leche_necesaria
     ):
-        return True
+        return False, 0
 
-    return False
+    inventario["cafe"] -= cafe_necesario
+    inventario["leche"] -= leche_necesaria
+
+    total = (
+        productos[opcion_producto]["precio"]
+        * cantidad_num
+    )
+
+    historial.append(
+        {
+            "producto": productos[opcion_producto]["nombre"],
+            "cantidad": cantidad_num,
+            "total": total
+        }
+    )
+
+    return True, total
+
+def calcular_cambio(
+    total,
+    dinero_recibido
+):
+
+    try:
+
+        dinero = float(
+            dinero_recibido
+        )
+
+        if dinero < total:
+            return False, 0
+
+        cambio = dinero - total
+
+        return True, cambio
+
+    except ValueError:
+
+        return False, 0
+    
+def mostrar_inventario(
+    inventario
+):
+
+    print("\nINVENTARIO")
+
+    print(
+        f"Café: {inventario['cafe']} gr"
+    )
+
+    print(
+        f"Leche: {inventario['leche']} ml"
+    )
+
+
+def mostrar_historial(
+    historial
+):
+
+    print("\nHISTORIAL DE VENTAS")
+
+    if len(historial) == 0:
+
+        print(
+            "No existen ventas registradas."
+        )
+
+        return
+
+    for venta in historial:
+
+        print("-" * 30)
+
+        print(
+            f"Producto: {venta['producto']}"
+        )
+
+        print(
+            f"Cantidad: {venta['cantidad']}"
+        )
+
+        print(
+            f"Total: ${venta['total']}"
+        )
+
+
+
+
+
+
+
+def calcular_facturacion_total(
+    historial
+):
+
+    acumulador = 0
+
+    for venta in historial:
+
+        acumulador += venta["total"]
+
+    return acumulador
+
+
+
+def alerta_stock(
+    inventario
+):
+
+    if inventario["cafe"] <= 500:
+
+        print(
+            "\nALERTA: stock de cafe bajo."
+        )
+
+
+# =====================================
+# PROGRAMA PRINCIPAL
+# =====================================
 
 def main():
 
@@ -90,23 +236,100 @@ def main():
         )
 
         if opcion == "0":
+
+            print(
+                "\nGracias por utilizar Smart Roast."
+            )
+
             break
 
-        elif opcion == "5":
+        elif opcion == "1":
 
-            print("\nINVENTARIO")
+            mostrar_productos(
+                productos
+            )
 
-            print(
-                "Cafe:",
-                inventario["cafe"],
-                "gr"
+            producto = input(
+                "\nSeleccione producto: "
+            )
+
+            cantidad = input(
+                "Cantidad: "
+            )
+
+            exito, total = registrar_venta(
+                inventario,
+                historial_ventas,
+                productos,
+                producto,
+                cantidad
+            )
+
+            if exito:
+
+                print(
+                    f"\nTotal a cobrar: ${total}"
+                )
+
+                dinero = input(
+                    "Dinero recibido: $"
+                )
+
+                venta_ok, cambio = calcular_cambio(
+                    total,
+                    dinero
+                )
+
+                if venta_ok:
+
+                    print(
+                        f"Cambio: ${cambio}"
+                    )
+
+                    alerta_stock(
+                        inventario
+                    )
+
+                else:
+
+                    print(
+                        "Monto insuficiente."
+                    )
+
+            else:
+
+                print(
+                    "No fue posible registrar la venta."
+                )
+
+        elif opcion == "2":
+
+            mostrar_inventario(
+                inventario
+            )
+
+        elif opcion == "3":
+
+            mostrar_historial(
+                historial_ventas
+            )
+        
+        elif opcion == "4":
+
+            total = calcular_facturacion_total(
+                historial_ventas
             )
 
             print(
-                "Leche:",
-                inventario["leche"],
-                "ml"
+                f"\nFacturación total: ${total}"
             )
+
+        else:
+
+            print(
+                "Opción inválida."
+            )
+
 
 
 if __name__ == "__main__":
