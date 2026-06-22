@@ -7,34 +7,39 @@ productos = {
         "nombre": "Espresso",
         "precio": 2500,
         "cafe": 18,
-        "leche": 0
+        "leche": 0,
+        "vasos": 1
     },
 
     "2": {
         "nombre": "Cafe con leche",
         "precio": 3500,
         "cafe": 18,
-        "leche": 150
+        "leche": 150,
+        "vasos": 1
     },
 
     "3": {
         "nombre": "Filtrado V60",
         "precio": 4000,
         "cafe": 20,
-        "leche": 0
+        "leche": 0,
+        "vasos": 1
     },
 
     "4": {
         "nombre": "Bolsa de granos 250g",
         "precio": 12000,
         "cafe": 250,
-        "leche": 0
+        "leche": 0,
+        "vasos": 0
     }
 }
 
 inventario = {
     "cafe": 5000,
-    "leche": 10000
+    "leche": 10000,
+    "vasos": 100
 }
 
 historial_ventas = []
@@ -98,15 +103,23 @@ def registrar_venta(
         * cantidad_num
     )
 
+    vasos_necesarios = (
+        productos[opcion_producto]["vasos"]
+        * cantidad_num
+    )
+
     if (
         inventario["cafe"] < cafe_necesario
         or
         inventario["leche"] < leche_necesaria
+        or
+        inventario["vasos"] < vasos_necesarios
     ):
         return False, 0
 
     inventario["cafe"] -= cafe_necesario
     inventario["leche"] -= leche_necesaria
+    inventario["vasos"] -= vasos_necesarios
 
     total = (
         productos[opcion_producto]["precio"]
@@ -117,7 +130,10 @@ def registrar_venta(
         {
             "producto": productos[opcion_producto]["nombre"],
             "cantidad": cantidad_num,
-            "total": total
+            "total": total,
+            "cafe_consumido": cafe_necesario,
+            "leche_consumida": leche_necesaria,
+            "vasos_consumidos": vasos_necesarios
         }
     )
 
@@ -159,6 +175,10 @@ def mostrar_inventario(
         f"Leche: {inventario['leche']} ml"
     )
 
+    print(
+        f"Vasos: {inventario['vasos']} unidades"
+    )
+
 
 def mostrar_historial(
     historial
@@ -190,6 +210,18 @@ def mostrar_historial(
             f"Total: ${venta['total']}"
         )
 
+        print(
+            f"Café consumido: {venta['cafe_consumido']} gr"
+        )
+
+        print(
+            f"Leche consumida: {venta['leche_consumida']} ml"
+        )
+
+        print(
+            f"Vasos utilizados: {venta['vasos_consumidos']}"
+        )
+
 
 
 
@@ -218,6 +250,16 @@ def alerta_stock(
 
         print(
             "\nALERTA: stock de cafe bajo."
+        )
+    if inventario["leche"] <= 1000:
+
+        print(
+            "\nALERTA: stock de leche bajo."
+        )
+    if inventario["vasos"] <= 10:
+
+        print(
+            "\nALERTA: stock de vasos bajo."
         )
 
 
